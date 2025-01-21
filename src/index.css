@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+    @apply bg-brown-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-brown-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brown-800 text-brown-50 hover:bg-brown-900 transition-colors px-8 py-3 rounded-full;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-brown-800 text-brown-800 hover:bg-brown-800 hover:text-brown-50 transition-colors px-8 py-3 rounded-full;
+  }
+  
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-brown-900 mb-6;
+  }
+  
+  .section-subtitle {
+    @apply text-brown-700 max-w-2xl mx-auto mb-12 text-center;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-brown-200 rounded-lg focus:ring-2 focus:ring-brown-300 focus:border-brown-400 transition-colors;
+  }
+}
+
+/* Custom Animations */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Mobile Responsive Utilities */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .section-title {
+    @apply text-3xl;
+  }
+}
+
