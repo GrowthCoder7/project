@@ -41,5 +41,14 @@ export const useCartStore = create<CartStore>((set) => ({
       }
       return state;
     });
-  }
+  },
+  updateQuantity: (productId, newQuantity) => {
+    set((state) => ({
+      items: state.items.map((item) =>
+        item.product.id === productId
+          ? { ...item, quantity: newQuantity }
+          : item
+      ),
+    }));
+  }  
 }));

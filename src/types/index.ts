@@ -10,6 +10,10 @@ export interface Product {
   tags?: string[];
   discount?: number;
   discountedPrice?:number;
+  size?:number;
+  bigSize?:number;
+  bigPrice?:number;
+  bigDiscountedPrice?:number;
 }
 
 export interface CartItem extends Product {

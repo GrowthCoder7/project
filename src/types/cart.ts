@@ -10,4 +10,5 @@ export interface CartStore {
   addToCart: (product: Product) => void;
   removeFromCart: (productId: number) => void;
   moveToWishlist: (productId: number) => void;
+  updateQuantity?: (productId: number,quantity: number) => void;
 }

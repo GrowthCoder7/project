@@ -201,7 +201,7 @@ export default function Checkout() {
                 </div>
               </div>
               <Button
-                className="w-full font-extrabold text-base bg-accent hover:bg-accent-light text-black"
+                className="w-full font-extrabold text-base bg-black hover:bg-accent-light text-white"
                 onClick={handleCheckout}
               >
                 Place Order
