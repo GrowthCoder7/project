@@ -495,7 +495,7 @@ export const products: Product[] = [
     price: 549.0,
     images: ['https://candlings.com/wp-content/webp-express/webp-images/uploads/2024/09/4-1000x1000.png.webp'],
     description: "Step into a world of cozy comfort with our Café Harmony Scented Candle, where the rich, inviting aromas of your favourite café treats blend together to create a warm and soothing atmosphere. Perfect for those who cherish the simple pleasures of life, this candle brings the essence of a quiet coffee shop right into your home. Fresh Coffee: The invigorating scent of freshly brewed coffee instantly awakens your senses, filling the air with the robust, earthy notes that coffee lovers crave. It’s the perfect pick-me-up, whether you’re starting your day or winding down. Crème Caramel: A touch of indulgence comes from the creamy, buttery scent of caramel, adding a delicious sweetness that melts into the background, reminiscent of a smooth, luxurious dessert enjoyed at the end of a meal. Vanilla: The warm, comforting essence of vanilla ties everything together, its soft and velvety aroma adding a layer of sweetness that lingers gently in the air, creating a cozy and inviting ambiance. Light this candle to enjoy a moment of pure relaxation and contentment, where the harmonious blend of fresh coffee, crème caramel, and vanilla wraps you in a warm, soothing embrace. Whether you’re curling up with a book, enjoying a quiet morning, or simply unwinding after a long day, Café Harmony brings the comforting essence of your favorite café into your space, making every moment a little more special.",
-    category: "Combos",
+    category: "combos",
     tags: getRandomTags(),
     discount: getRandomDiscount(),
     discountedPrice:419
@@ -506,7 +506,7 @@ export const products: Product[] = [
     price: 549.0,
     images: ['https://candlings.com/wp-content/webp-express/webp-images/uploads/2024/09/2-1000x1000.jpg.webp'],
     description: "Immerse yourself in the enchanting embrace of a garden in full bloom with our Floral Bouquet Scented Candle. This delightful blend captures the essence of spring, bringing the beauty and fragrance of a lush floral bouquet into your home.\n- Pink Peony: The scent of freshly bloomed pink peonies introduces a soft, romantic touch, filling the air with a delicate, powdery sweetness that is both uplifting and calming.\n- Tahitian Honey: Adding a warm, golden layer, the subtle sweetness of Tahitian honey weaves through the floral notes, offering a rich, comforting depth that feels like a sun-kissed breeze.\n- Jasmine: Completing the bouquet, the exotic allure of jasmine blossoms lends a sultry, intoxicating aroma, creating a perfect harmony that soothes the senses and elevates the spirit.\nLight this candle to transform any space into a serene floral haven, where the soothing blend of pink peony, Tahitian honey, and jasmine creates a sanctuary of tranquillity and elegance. Whether you’re unwinding after a long day or setting the mood for a special occasion, this candle brings the timeless beauty of a floral bouquet into your everyday life.",
-    category: "Combos",
+    category: "combos",
     tags: getRandomTags(),
     discount: getRandomDiscount(),
     discountedPrice:419
@@ -517,7 +517,7 @@ export const products: Product[] = [
     price: 549.0,
     images: ['https://candlings.com/wp-content/webp-express/webp-images/uploads/2024/09/5-1000x1000.png.webp'],
     description: "Dive into a vibrant world of sweet indulgence with our Fruit Fantasy Scented Candle. This playful and refreshing blend combines the juicy scents of apple, orange, raspberry, watermelon cotton candy, and pink grapefruit, creating a delightful aroma that brightens any space with its fruity and fun essence.\n- Apple, Orange & Raspberry: The invigorating combination of crisp apple, zesty orange, and tart raspberry offers a burst of fresh, fruity delight. This bright and juicy blend captures the essence of a sun-soaked orchard, instantly uplifting your mood with its lively and refreshing scent.\n- Watermelon Cotton Candy: Adding a playful twist, the sweet and nostalgic aroma of watermelon cotton candy brings a light, airy sweetness to the mix. This scent evokes carefree summer days and carnival fun, filling the air with a sugary, mouth-watering scent that’s irresistibly cheerful.\n- Pink Grapefruit: The bold, tangy fragrance of pink grapefruit rounds out the blend with a burst of citrusy freshness. Its slightly tart and energizing aroma adds a vibrant zing, balancing the sweetness with a lively, refreshing note that awakens the senses.\n Light this candle to transform your space into a fruity paradise where every breath is a sweet escape. Fruit Fantasy is perfect for those who love vibrant, fun scents that bring joy and energy into any room. Whether you’re setting the mood for a gathering or simply brightening your day, this candle offers a deliciously fun fragrance experience that’s sure to leave a lasting impression.",
-    category: "Combos",
+    category: "combos",
     tags: getRandomTags(),
     discount: getRandomDiscount(),
     discountedPrice:419
@@ -528,7 +528,7 @@ export const products: Product[] = [
     price: 549.0,
     images: ['https://candlings.com/wp-content/webp-express/webp-images/uploads/2024/09/4-1000x1000.png.webp'],
     description: "Step into a world of cozy comfort with our Café Harmony Scented Candle, where the rich, inviting aromas of your favourite café treats blend together to create a warm and soothing atmosphere. Perfect for those who cherish the simple pleasures of life, this candle brings the essence of a quiet coffee shop right into your home. Fresh Coffee: The invigorating scent of freshly brewed coffee instantly awakens your senses, filling the air with the robust, earthy notes that coffee lovers crave. It’s the perfect pick-me-up, whether you’re starting your day or winding down. Crème Caramel: A touch of indulgence comes from the creamy, buttery scent of caramel, adding a delicious sweetness that melts into the background, reminiscent of a smooth, luxurious dessert enjoyed at the end of a meal. Vanilla: The warm, comforting essence of vanilla ties everything together, its soft and velvety aroma adding a layer of sweetness that lingers gently in the air, creating a cozy and inviting ambiance. Light this candle to enjoy a moment of pure relaxation and contentment, where the harmonious blend of fresh coffee, crème caramel, and vanilla wraps you in a warm, soothing embrace. Whether you’re curling up with a book, enjoying a quiet morning, or simply unwinding after a long day, Café Harmony brings the comforting essence of your favorite café into your space, making every moment a little more special.",
-    category: "Combos",
+    category: "combos",
     tags: getRandomTags(),
     discount: getRandomDiscount(),
     discountedPrice:419
@@ -539,7 +539,7 @@ export const products: Product[] = [
     price: 549.0,
     images: ['https://candlings.com/wp-content/webp-express/webp-images/uploads/2024/09/4-1000x1000.png.webp'],
     description: "Step into a world of cozy comfort with our Café Harmony Scented Candle, where the rich, inviting aromas of your favourite café treats blend together to create a warm and soothing atmosphere. Perfect for those who cherish the simple pleasures of life, this candle brings the essence of a quiet coffee shop right into your home. Fresh Coffee: The invigorating scent of freshly brewed coffee instantly awakens your senses, filling the air with the robust, earthy notes that coffee lovers crave. It’s the perfect pick-me-up, whether you’re starting your day or winding down. Crème Caramel: A touch of indulgence comes from the creamy, buttery scent of caramel, adding a delicious sweetness that melts into the background, reminiscent of a smooth, luxurious dessert enjoyed at the end of a meal. Vanilla: The warm, comforting essence of vanilla ties everything together, its soft and velvety aroma adding a layer of sweetness that lingers gently in the air, creating a cozy and inviting ambiance. Light this candle to enjoy a moment of pure relaxation and contentment, where the harmonious blend of fresh coffee, crème caramel, and vanilla wraps you in a warm, soothing embrace. Whether you’re curling up with a book, enjoying a quiet morning, or simply unwinding after a long day, Café Harmony brings the comforting essence of your favorite café into your space, making every moment a little more special.",
-    category: "Combos",
+    category: "combos",
     tags: getRandomTags(),
     discount: getRandomDiscount(),
     discountedPrice:419
