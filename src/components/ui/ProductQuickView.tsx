@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Minus, Plus } from 'lucide-react';
+import { X, Minus, Plus, ChevronDown, ChevronUp } from 'lucide-react';
 import { Product } from '../../types';
 import Button from './Button';
 import ImageGallery from './ImageGallery';
@@ -15,6 +15,10 @@ interface ProductQuickViewProps {
 
 export default function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewProps) {
   const [quantity, setQuantity] = useState(1);
+  const [showDescription, setShowDescription] = useState(false);
+  const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
+  const [showReviews, setShowReviews] = useState(false);
+  const [isReviewFormOpen, setIsReviewFormOpen] = useState(false);
   const addToCart = useCartStore((state) => state.addToCart);
   const addToWishlist = useWishlistStore((state) => state.addToWishlist);
 
@@ -37,7 +41,7 @@ export default function ProductQuickView({ product, isOpen, onClose }: ProductQu
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center  justify-center z-50">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg max-w-4xl min-h-3/5 w-full mx-4 relative overflow-hidden">
         <button
           onClick={onClose}
@@ -67,28 +71,45 @@ export default function ProductQuickView({ product, isOpen, onClose }: ProductQu
               )}
             </div>
             
-            {product.description && (
-              <p className="text-neutral-600 mb-6 leading-relaxed">
-                {product.description}
-              </p>
-            )}
-            
-            {product.scent && (
-              <div className="mb-6">
-                <h3 className="font-medium mb-2">Fragrance Notes</h3>
-                <div className="flex flex-wrap gap-2">
-                  {product.scent.map((note) => (
-                    <span
-                      key={note}
-                      className="bg-neutral-100 px-3 py-1 rounded-full text-sm"
-                    >
-                      {note}
-                    </span>
-                  ))}
+            <div className="mb-6">
+              <button
+                onClick={() => setShowDescription((prev) => !prev)}
+                className="flex items-center text-neutral-600 font-medium"
+              >
+                Description
+                {showDescription ? <ChevronUp className="ml-2" /> : <ChevronDown className="ml-2" />}
+              </button>
+              {showDescription && (
+                <div
+                  className="mt-4 text-neutral-600 leading-relaxed max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300"
+                  style={{ paddingRight: '0.5rem' }}
+                >
+                  {product.description}
                 </div>
-              </div>
-            )}
-            
+              )}
+            </div>
+
+            <div className="mb-6">
+              <button
+                onClick={() => setShowAdditionalInfo((prev) => !prev)}
+                className="flex items-center text-neutral-600 font-medium"
+              >
+                Additional Information
+                {showAdditionalInfo ? <ChevronUp className="ml-2" /> : <ChevronDown className="ml-2" />}
+              </button>
+              {showAdditionalInfo && (
+                <div className="mt-4 text-sm text-neutral-600">
+                  <p>Category: {product.category}</p>
+                  <p>Sizes: {product.sizes?.join(', ') || 'N/A'}</p>
+                  <p>Dimensions: {product.dimensions || 'N/A'}</p>
+                  <p>Burn Time: {product.burnTime || 'N/A'}</p>
+                  <p>Top Note: {product.fragranceNotes?.top || 'N/A'}</p>
+                  <p>Mid Note: {product.fragranceNotes?.mid || 'N/A'}</p>
+                  <p>Base Note: {product.fragranceNotes?.base || 'N/A'}</p>
+                </div>
+              )}
+            </div>
+
             <div className="mb-6">
               <h3 className="font-medium mb-2">Quantity</h3>
               <div className="flex items-center gap-4">
@@ -108,8 +129,8 @@ export default function ProductQuickView({ product, isOpen, onClose }: ProductQu
                 </button>
               </div>
             </div>
-            
-            <div className="flex gap-4">
+
+            <div className="flex gap-4 mb-6">
               <Button
                 variant="primary"
                 size="lg"
@@ -129,16 +150,49 @@ export default function ProductQuickView({ product, isOpen, onClose }: ProductQu
                 Add to Wishlist
               </Button>
             </div>
-            
-            {product.burnTime && (
-              <div className="mt-6 p-4 bg-neutral-50 rounded-lg">
-                <h3 className="font-medium mb-2">Product Details</h3>
-                <div className="text-sm text-neutral-600">
-                  <p>Burn Time: {product.burnTime}</p>
-                  {product.category && <p>Category: {product.category}</p>}
+
+            <div className="mb-6">
+              <button
+                onClick={() => setShowReviews((prev) => !prev)}
+                className="flex items-center text-neutral-600 font-medium"
+              >
+                Reviews
+                {showReviews ? <ChevronUp className="ml-2" /> : <ChevronDown className="ml-2" />}
+              </button>
+              {showReviews && (
+                <div className="mt-4 text-sm">
+                  <p>No reviews yet. Be the first to write one!</p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-2"
+                    onClick={() => setIsReviewFormOpen(true)}
+                  >
+                    Write a Review
+                  </Button>
+                  {isReviewFormOpen && (
+                    <div className="mt-4">
+                      <textarea
+                        className="w-full border p-2 rounded-md"
+                        rows={4}
+                        placeholder="Write your review here..."
+                      ></textarea>
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        className="mt-2"
+                        onClick={() => {
+                          setIsReviewFormOpen(false);
+                          alert('Review submitted successfully!');
+                        }}
+                      >
+                        Submit Review
+                      </Button>
+                    </div>
+                  )}
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>

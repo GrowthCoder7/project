@@ -4,7 +4,7 @@ import { Heart, ShoppingCart, Plus } from 'lucide-react';
 import { Product } from '../../types';
 import { useCartStore } from '../../store/useCartStore';
 import { useWishlistStore } from '../../store/useWishlistStore';
-import { formatPrice } from '../../utils/priceUtils';
+// import { formatPrice } from '../../utils/priceUtils';
 import ProductQuickView from './ProductQuickView';
 
 interface ProductCardProps {
@@ -17,10 +17,10 @@ export default function ProductCard({ product }: ProductCardProps) {
   const addToCart = useCartStore((state) => state.addToCart);
   const addToWishlist = useWishlistStore((state) => state.addToWishlist);
 
-  const { originalPrice, finalPrice, discountPercentage } = formatPrice(
-    product.price,
-    product.discountedPrice
-  );
+  // const { originalPrice, finalPrice, discountPercentage } = formatPrice(
+  //   product.price,
+  //   product.discountedPrice
+  // );
 
   return (
     <>
@@ -63,7 +63,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         
         <div className="text-center p-6 bg-white">
           <h3 className="font-serif text-xl text-brown-900 mb-2">{product.name}</h3>
-          <div className="flex items-center justify-center gap-2">
+          {/* <div className="flex items-center justify-center gap-2">
             {discountPercentage > 0 && (
               <span className="text-brown-400 line-through">{originalPrice}</span>
             )}
@@ -71,7 +71,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {discountPercentage > 0 && (
               <span className="text-cream-700 text-sm">-{discountPercentage}%</span>
             )}
-          </div>
+          </div> */}
         </div>
       </motion.div>
 

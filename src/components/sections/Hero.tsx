@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import myImage from "../../assets/images/2.png"
+import myImage from '../../assets/images/2.png';
 import Hero2 from '../../assets/images/3.jpg';
 
 export default function Hero() {
@@ -11,21 +11,32 @@ export default function Hero() {
     {
       image: myImage,
       title: 'Artisanal Luxury Candles',
-      subtitle: 'Handcrafted with love, designed for your moments of serenity'
+      subtitle: 'Handcrafted with love, designed for your moments of serenity',
     },
     {
       image: Hero2,
       title: 'Discover Our Collection',
-      subtitle: 'Premium soy wax blended with natural essential oils'
-    }
+      subtitle: 'Premium soy wax blended with natural essential oils',
+    },
   ];
 
+  // Handle automatic slide transitions
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 3500);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
+
+  // Navigate to the previous slide
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  // Navigate to the next slide
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
 
   return (
     <div className="relative h-screen">
@@ -47,7 +58,8 @@ export default function Hero() {
           </div>
         </div>
       ))}
-      
+
+      {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 tracking-wide">
@@ -56,7 +68,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-white/90 mb-12 tracking-wider">
             {slides[currentSlide].subtitle}
           </p>
-          <button 
+          <button
             onClick={() => navigate('/collections')}
             className="btn-primary text-sm tracking-widest uppercase"
           >
@@ -65,6 +77,23 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Navigation Buttons */}
+      <div className="absolute inset-0 flex justify-between items-center px-4 md:px-8">
+        <button
+          onClick={prevSlide}
+          className="w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-all"
+        >
+          &larr;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="w-12 h-12 rounded-full bg-black/30 hover:bg-black/50 text-white flex items-center justify-center transition-all"
+        >
+          &rarr;
+        </button>
+      </div>
+
+      {/* Dots Indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex space-x-4">
         {slides.map((_, index) => (
           <button

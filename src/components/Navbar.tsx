@@ -10,14 +10,14 @@ export default function Navbar() {
             <button className="sm:hidden p-2">
               <Menu className="h-6 w-6 text-neutral-700" />
             </button>
-            <div className="text-2xl font-serif text-neutral-900 ml-2 sm:ml-0">Candlings</div>
+            {/* <div className="text-2xl font-serif text-neutral-900 ml-2 sm:ml-0">Candlings</div> */}
           </div>
           
           <div className="hidden sm:flex items-center space-x-8">
-            <a href="#" className="text-neutral-700 hover:text-neutral-900">Shop</a>
-            <a href="#" className="text-neutral-700 hover:text-neutral-900">Collections</a>
-            <a href="#" className="text-neutral-700 hover:text-neutral-900">About</a>
-            <a href="#" className="text-neutral-700 hover:text-neutral-900">Contact</a>
+            <a href="/" className="text-neutral-700 hover:text-neutral-900">Home</a>
+            <a href="/collections" className="text-neutral-700 hover:text-neutral-900">Collections</a>
+            <a href="/about" className="text-neutral-700 hover:text-neutral-900">About</a>
+            <a href="/contact" className="text-neutral-700 hover:text-neutral-900">Contact</a>
           </div>
 
           <div className="flex items-center space-x-4">

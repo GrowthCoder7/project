@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ContactSection from './pages/Contact';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path='/contact' element={<ContactSection/>}></Route>
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
