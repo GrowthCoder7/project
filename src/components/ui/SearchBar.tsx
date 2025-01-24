@@ -67,13 +67,16 @@ export default function SearchBar() {
               onClick={() => handleProductClick(product)}
             >
               <img
-                src={product.image}
+                src={product.images[0]}
                 alt={product.name}
                 className="w-16 h-16 object-cover rounded"
               />
               <div>
                 <h3 className="font-medium">{product.name}</h3>
-                <p className="text-sm text-neutral-600">${product.price}</p>
+                <div className='flex gap-2'>
+                <p className="text-sm text-neutral-600 line-through" >₹{product.price}</p>
+                <p className="text-sm text-neutral-600">₹{product.discountedPrice}</p>
+                </div>
                 {product.category && (
                   <p className="text-xs text-neutral-500">{product.category}</p>
                 )}

@@ -53,7 +53,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             {results.map((product) => (
               <div key={product.id} className="flex items-center gap-4 p-4 hover:bg-neutral-50">
                 <img
-                  src={product.image}
+                  src={product.images[0]}
                   alt={product.name}
                   className="w-16 h-16 object-cover rounded"
                 />
