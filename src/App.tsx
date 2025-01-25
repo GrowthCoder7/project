@@ -15,6 +15,7 @@ import AdminDashboard from './pages/admin/Dashboard';
 import AdminProducts from './pages/admin/Products';
 import Login from './pages/Login';
 import { ShopProvider } from './Context/ShopContext';
+import ProductPage from './pages/ProductPage';
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path='/contact' element={<ContactSection/>}></Route>
+          <Route path="/product/:id" element={<ProductPage />} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
