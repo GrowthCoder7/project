@@ -22,7 +22,7 @@ export default function App() {
     <ShopProvider>
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white/95">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

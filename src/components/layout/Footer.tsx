@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NewsletterForm from '../newsletter/NewsletterForm';
@@ -17,21 +16,23 @@ export default function Footer() {
 
           <div>
             <h4 className="font-medium mb-4">Shop</h4>
+            <h1 className="font-serif text-2xl mb-4 text-white block">Pages</h1>
             <ul className="space-y-2">
-              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">All Products</Link></li>
               <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Collections</Link></li>
-              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Gift Sets</Link></li>
-              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Accessories</Link></li>
+              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">About us</Link></li>
+              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Contact</Link></li>
+              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Bulk Order Enquiry</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-medium mb-4">Company</h4>
+            <h1 className="font-serif text-2xl mb-4 text-white block">Policies</h1>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">About Us</Link></li>
-              <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">Sustainability</Link></li>
-              <li><Link to="/contact" className="text-brown-50/80 hover:text-brown-50">Contact</Link></li>
-              <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">Stockists</Link></li>
+              <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">Terms & Conditions</Link></li>
+              <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">Privacy Policy</Link></li>
+              <li><Link to="/contact" className="text-brown-50/80 hover:text-brown-50">Refund & Return policy</Link></li>
+              <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">Shipping Policy</Link></li>
             </ul>
           </div>
 

@@ -20,7 +20,7 @@ export const categories = [
     description: 'Delicate botanical fragrances that bloom in your space'
   },
   {
-    id: 'combos',
+    id: 'Combos',
     name: 'Combos',
     description: 'Curated sets of complementary fragrances'
   }

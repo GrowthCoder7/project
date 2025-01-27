@@ -3,7 +3,7 @@ import { Flame, Award, Heart } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="py-24 bg-gradient-to-b from-amber-100 via-white to-pink-100 relative overflow-hidden">
+    <section className="py-24  relative overflow-hidden">
       {/* Floating Particles */}
       <div className="absolute top-0 left-10 w-40 h-40 bg-rose-200/40 rounded-full blur-3xl opacity-30 animate-pulse"></div>
       <div className="absolute bottom-10 right-20 w-48 h-48 bg-amber-200/50 rounded-full blur-2xl opacity-30 animate-bounce"></div>
@@ -44,7 +44,7 @@ export default function About() {
               key={index}
               className="text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-gradient-to-tr from-pink-100 to-amber-100 rounded-full shadow-md">
+              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center  rounded-full shadow-md">
                 {item.icon}
               </div>
               <h3 className="font-serif text-xl text-neutral-900 mb-4">{item.title}</h3>
