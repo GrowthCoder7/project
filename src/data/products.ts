@@ -1,6 +1,66 @@
 import { Product } from '../types';
 import { getRandomTags} from '../utils/productUtils';
 
+import pinkGrape1 from "../assets/images/pics/premium/Pink_Grapefruit.jpg"
+import pinkGrape2 from "../assets/images/pics/premium/Pink grapefruit 1.1.jpg"
+import pinkGrape3 from "../assets/images/pics/premium/pink peony combo.png"
+import apple from "../assets/images/pics/premium/Apple, Orange &Raspberry 400 (1).png"
+import apple2 from "../assets/images/pics/premium/apple orange raspberry 250.png"
+import blueberry from "../assets/images/pics/premium/Blueberry muffin 1.1.jpg"
+import blueberry2 from "../assets/images/pics/premium/Blueberry muffin 200.1 .jpg"
+import blueberry3 from "../assets/images/pics/premium/Blueberry muffin combo.jpg"
+import cleanLinen from "../assets/images/pics/premium/Clean linen 1.1.jpg"
+import cleanLinen2 from "../assets/images/pics/premium/Clean Linen 200.1 .jpg"
+import creameCaramel from "../assets/images/pics/premium/Crème caramel 1.1.jpg"
+import creameCaramel2 from "../assets/images/pics/premium/Crème caramel 200.1 .jpg"
+import freshCofee from "../assets/images/pics/premium/fresh coffee 250.png"
+import freshCofee2 from "../assets/images/pics/premium/fresh coffee 400.png"
+import jasmine from "../assets/images/pics/premium/Jasmine.png"
+import jasmine2 from "../assets/images/pics/premium/jasmine 250.png"
+import lemon from "../assets/images/pics/premium/Lemon Lime 1.1.jpg"
+import lemon2 from "../assets/images/pics/premium/Lemon Lime 200.2.jpg"
+import lemon3 from "../assets/images/pics/premium/lemon lime combo.jpg"
+import pink from "../assets/images/pics/premium/Pink Peony 250.png"
+import pink2 from "../assets/images/pics/premium/Pink Peony 400.png"
+import pink3 from "../assets/images/pics/premium/pink peony combo.png"
+import salted from "../assets/images/pics/premium/Salted caramel 1.1.jpg"
+import salted2 from "../assets/images/pics/premium/Salted caramel 200.1 .jpg"
+import salted3 from "../assets/images/pics/premium/Salted caramel combo.jpg"
+import sandalwood from "../assets/images/pics/premium/Sandalwood.png"
+import sandalwood2 from "../assets/images/pics/premium/sandalwood 250.png"
+import sandalwood3 from "../assets/images/pics/premium/sandalwood combo.png"
+import vanilla from "../assets/images/pics/premium/vanilla250.png"
+import vanilla2 from "../assets/images/pics/premium/Vanilla 400.png"
+import vanilla3 from "../assets/images/pics/premium/Vanilla combo.png"
+import tahitian from "../assets/images/pics/premium/Tahitian Honey 400.png"
+import tahitian2 from "../assets/images/pics/premium/tahitian honey combo.png"
+import watermelon from "../assets/images/pics/premium/watermelon cooton candy250.png"
+import watermelon2 from "../assets/images/pics/premium/Watermelon cotton candy 400.png"
+import watermelon3 from "../assets/images/pics/premium/watermelon cotton candy combo.png"
+import whiteLined from "../assets/images/pics/premium/white linen.png"
+import whiteLined2 from "../assets/images/pics/premium/white linen 250.png"
+import whiteLined3 from "../assets/images/pics/premium/white linen combo.png"
+import waterLily from "../assets/images/pics/premium/water lily250.png"
+import waterLily2 from "../assets/images/pics/premium/Water Lily 400.png"
+import waterLily3 from "../assets/images/pics/premium/water lily combo.png"
+import winterNight from "../assets/images/pics/premium/winter nights 400.png"
+import winterNight2 from "../assets/images/pics/premium/winter nights 250.png"
+import winterNight3 from "../assets/images/pics/premium/winter nights combo.png"
+import coconut from "../assets/images/pics/premium/Coconut melon 1.1.jpg"
+import coconut2 from "../assets/images/pics/premium/Coconut melon 200.1 .jpg"
+import coconut3 from "../assets/images/pics/premium/Coconut melon combo.jpg"
+import coolWater from "../assets/images/pics/premium/Cool Water 400.png"
+import coolWater2 from "../assets/images/pics/premium/cool water 250.png"
+import coolWater3 from "../assets/images/pics/premium/cool water combo.png"
+import bulgarian from "../assets/images/pics/signature/Bulgarian_Rose.png"
+import darkRum from "../assets/images/pics/signature/DarkRum.png"
+import dolce from "../assets/images/pics/signature/dolce.png"
+import hawain from "../assets/images/pics/signature/Hawain.png"
+import persian from "../assets/images/pics/signature/Persian.png"
+import vera from "../assets/images/pics/signature/Vera.png"
+import wine from "../assets/images/pics/signature/Wine.png"
+// import ylang from "../assets/images/pics/signature/Ylang.png"
+
 export const products: Product[] = 
 [
   {
@@ -9,7 +69,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[blueberry,blueberry2,blueberry3],
       description: "This fragrance opens with a vibrant burst of citrus and fruity notes, combining the zesty aroma of orange peel, the juicy sweetness of blueberry, and the refreshing tang of lemon zest. The mid notes unfold with a delightful blend of blackberry, spun sugar, and creamy milky undertones, evoking a sense of indulgence and sweetness. The base notes provide a warm and comforting foundation, with the creamy essence of vanilla cream, the luscious sweetness of drizzled caramel, and the woody touch of sandalwood. Together, these notes create a deliciously sweet and comforting fragrance that is both uplifting and cozy",
       category: "Classic Collection",
       length: 9,
@@ -44,7 +104,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[bulgarian],
       description: "This fragrance opens with a delicate and romantic combination of soft rose petals, white violet, and wild strawberry, creating a sweet and floral introduction. The mid notes introduce a fresh and elegant bouquet, blending pink geranium, lily of the valley, and dewy rose bud, evoking a sense of grace and femininity. The base notes provide a warm and sensual foundation, with the silky musk, iris, and clove bud adding depth and allure to the fragrance. Together, these notes create a harmonious and captivating fragrance that is both romantic and sophisticated",
       category: "Signature Collection",
       length: 9,
@@ -78,7 +138,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[cleanLinen,cleanLinen2],
       description: "This fragrance opens with a delicate and soothing blend of chamomile, lily, and freesia, creating a serene and calming atmosphere. The mid notes introduce the elegant and floral accord of gardenia, iris root, and white flowers, adding a touch of sophistication and grace. The base notes provide a creamy and comforting foundation, with the notes of Madagascar vanilla and white musk imparting a sense of warmth and sensuality. Together, these notes create a harmonious and enchanting fragrance that is both serene and effortlessly elegant",
       category: "Classic Collection",
       length: 9,
@@ -112,7 +172,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[darkRum],
       description: "This fragrance opens with a refreshing burst of lime, combined with the tropical and creamy aroma of coconut and the soothing floral notes of lavender. As the fragrance develops, the mid notes of jasmine and dark rum accord add a touch of sensuality and intrigue. The base notes of sandalwood, vetiver, cedar, patchouli, tonka, and cashmere musk create a warm and woody foundation, enveloping the scent with depth and complexity. Together, these notes blend harmoniously to create a captivating fragrance that is both refreshing and alluring, evoking a sense of tropical paradise and sophistication",
       category: "Signature Collection",
       length: 9,
@@ -146,7 +206,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[freshCofee,freshCofee2],
       description: "This fragrance begins with a sweet and indulgent combination of sugarcane and whipped cream, evoking a sense of sugary delight. As the fragrance develops, milky notes and roasted coffee bean emerge, creating a comforting and cozy aroma reminiscent of a delicious coffeehouse treat. The base notes of vanilla cr\u945de, oak, sandalwood, and anise add depth and warmth, leaving a lingering and inviting trail. Together, these notes create a rich and creamy scent that is both comforting and enticing, enveloping you in a sweet and aromatic embrace",
       category: "Premium Collection",
       length: 9,
@@ -180,7 +240,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[hawain],
       description: "This fragrance is a vibrant and tropical blend that transports you to a lush paradise. The top notes of lime, mandarin, mango, apple, and fei banana leaves create a refreshing and fruity opening, energizing your senses. The mid notes of jasmine, cyclamen, and shore juniper add a floral and aromatic touch, evoking the beauty of a coastal landscape. The base notes of driftwood and hula girl orchid provide a grounding and sensual element, completing the fragrance with a hint of exotic allure. Together, these notes create a captivating scent that embodies the spirit of a tropical getaway",
       category: "Signature Collection",
       length: 9,
@@ -215,7 +275,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[pinkGrape1,pinkGrape2,pinkGrape3],
       description: "This fragrance opens with a burst of refreshing citrus notes, including bergamot, grapefruit, lemon rind, and citron. These vibrant top notes create an invigorating and uplifting atmosphere. In the middle, pink grapefruit, iris, and light ozonic notes add a touch of brightness and a subtle floral aspect to the composition. The base notes of sugar cane, vanilla, and cypress bring a warm and comforting element, balancing the citrus and floral accords. The overall result is a harmonious blend that is both energizing and soothing, perfect for those who seek a fresh and uplifting fragrance experience",
       category: "Classic Collection",
       length: 9,
@@ -251,7 +311,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[salted,salted2,salted3],
       description: "This fragrance is a delectable and indulgent treat for the senses. The top notes offer a delightful combination of sweet buttery aromas with a hint of salt, creating a mouthwatering sensation. In the middle, creamy caramel, luscious coconut, and irresistible candied pecan notes come together, evoking the richness of a decadent dessert. The base notes bring warmth and comfort with the sweet essence of vanilla sugar, the comforting aroma of toasted tonka, and the creamy allure of condensed milk. This fragrance is a true favorite, captivating with its irresistible gourmand blend",
       category: "Classic Collection",
       length: 9,
@@ -283,7 +343,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[tahitian,tahitian2],
       description: "This fragrance opens with a burst of tropical berries, tangy red currant, and the rich aroma of acai berry, creating a juicy and vibrant introduction. The middle notes reveal a delightful combination of sweet honey, delicate rose petals, and fresh greens, adding a touch of floral elegance and natural freshness to the composition. Finally, the base notes wrap the scent in a warm embrace of creamy musk and sweet vanilla, providing a comforting and sensual finish. This fragrance is a harmonious blend of fruity, floral, and creamy notes, evoking a sense of tropical bliss and natural beauty",
       category: "Premium Collection",
       length: 9,
@@ -316,7 +376,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[vanilla,vanilla2,vanilla3],   
       description: "This fragrance opens with a burst of tropical berries, tangy red currant, and the rich aroma of acai berry, creating a juicy and vibrant introduction. The middle notes reveal a delightful combination of sweet honey, delicate rose petals, and fresh greens, adding a touch of floral elegance and natural freshness to the composition. Finally, the base notes wrap the scent in a warm embrace of creamy musk and sweet vanilla, providing a comforting and sensual finish. This fragrance is a harmonious blend of fruity, floral, and creamy notes, evoking a sense of tropical bliss and natural beauty",
       category: "Premium Collection",
       length: 9,
@@ -348,7 +408,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[vera],
       description: "This fragrance opens with a burst of citrus freshness, combining lemon, lime, mandarin, bergamot, and pineapple for a vibrant and invigorating top note. The mid notes reveal a floral bouquet, blending lily of the valley, gardenia, jasmine, rose, and iris, lending a delicate and feminine touch to the composition. The base notes provide a warm and sensual foundation, with the earthiness of sandalwood and patchouli, the richness of amber, and the softness of musk. Together, these notes create a harmonious fragrance that is both uplifting and sophisticated",
       category: "Signature Collection",
       length: 9,
@@ -385,7 +445,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[waterLily,waterLily2,waterLily3],
       description: "This fragrance opens with a captivating burst of Absolute Jasmine, Orange Zest, and Freesia, creating a bright and floral introduction. The heart of the scent features notes of Bitter Orange, Water Lily, and Muguet, adding a refreshing and aquatic aspect to the composition. The base notes of Floral Musk, Blondewoods, and Ozone Accord provide a soft and sensual foundation, enhancing the overall floral character of the fragrance. Together, these notes combine to create a harmonious and uplifting scent experience that evokes a sense of floral elegance and freshness",
       category: "Premium Collection",
       length: 9,
@@ -420,7 +480,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[watermelon,watermelon2,watermelon3],
       description: "This fragrance starts with a bright and zesty combination of Lemon Sugar, Sugar Baby Watermelon, and Red Berry, creating a vibrant and sweet opening. As it develops, the scent transitions into juicy and fruity notes of Juicy Peach and Raspberry Sugar, adding a deliciously mouthwatering quality. The base notes of Coconut Sugar and Vanilla Sugarcane provide a creamy and sweet foundation, imparting a warm and comforting feel to the fragrance. Overall, this scent captures the essence of a refreshing and sweet summer treat, perfect for those seeking a delightful and uplifting fragrance experience",
       category: "Premium Collection",
       length: 9,
@@ -453,7 +513,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[whiteLined,whiteLined2,whiteLined3],
       description: "This fragrance opens with a light and fresh blend of Airy Aldehydes, Lemon, Peach, and Carnation, creating a vibrant and invigorating introduction. The heart of the scent is a rich bouquet of Hyacinth, Muguet, Rose, Lilac, Jasmin, Iris, Orris, Violet, and Ylang, which adds a floral complexity and elegance. The base notes of Sandalwood, Cedar, Vetiver, Oakmoss, Benzoin Resin, Tonka, and Sheer Amber provide a warm and earthy foundation, giving the fragrance depth and longevity. Overall, this fragrance offers a harmonious combination of citrus, floral, and woody notes for a sophisticated and captivating olfactory experience.",
       category: "Premium Collection",
       length: 9,
@@ -499,7 +559,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[wine],
       description: "This fragrance opens with a zesty burst of Lemon, Lime, Orange, Clove, and Cinnamon, creating a lively and invigorating sensation. The heart of the scent reveals the delicate yet rich notes of Chardonnay Grape and Bulgarian Rose, adding a touch of elegance and floral sweetness. The base notes of Nutmeg, Sugarcane, and Vanilla provide a warm and comforting foundation, adding a hint of spice and sweetness. Together, these notes blend harmoniously to create a captivating and uplifting fragrance that is both refreshing and inviting",
       category: "Signature Collection",
       length: 9,
@@ -534,7 +594,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[winterNight,winterNight2,winterNight3],
       description: "This fragrance is a sophisticated blend of aromatic layers. The top notes of bergamot and clean ozonic create a fresh and airy opening, setting the stage for the fragrance experience. The mid notes of osmanthus and geranium add a floral touch, imparting a sense of elegance and femininity. The heart of the fragrance is complemented by warm, woody bottom notes that bring depth and richness. The smoothness of vanilla bean harmoniously balances the composition, creating a comforting and alluring scent that lingers on the skin",
       category: "Premium Collection",
       length: 9,
@@ -563,7 +623,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[coconut,coconut2,coconut3],
       description: "This fragrance opens with a burst of refreshing citrus, sweet orange, and juicy melon, creating a lively and invigorating sensation. The mid notes reveal a tropical paradise with the creamy and exotic essence of coconut, the delicate floral tones of ylang-ylang and jasmine, and a hint of fresh greens. As the fragrance settles, the base note of vanilla adds a warm and comforting touch, creating a harmonious and inviting blend. Together, these notes evoke a sense of sunny days, tropical landscapes, and a hint of sweetness, making it a delightful and uplifting fragrance choice",
       category: "Classic Collection",
       length: 9,
@@ -598,7 +658,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[lemon,lemon2,lemon3],
       description: "This fragrance is a zesty and invigorating blend that awakens the senses. The top notes of lemon, lime, ginger, and peppermint create a refreshing and citrusy burst, offering a vibrant and uplifting experience. The mid notes of litsea cubeba and orange blossom add a touch of floral and aromatic sweetness, balancing the bright citrus with a delicate floral nuance. The dry notes of cedarwood, raw vanilla, and citrus musk provide a warm and comforting base, leaving a subtle and lingering trail. Together, these notes create a dynamic and refreshing fragrance that is both energizing and comforting",
       category: "Classic Collection",
       length: 9,
@@ -633,7 +693,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[creameCaramel,creameCaramel2],
       description: "This fragrance begins with the comforting and nutty aroma of almond, instantly creating a sense of warmth and familiarity. As the fragrance develops, creamy milk and butter notes emerge, adding a smooth and indulgent quality. The base notes of vanilla and sweet caramel provide a delightful sweetness and richness, reminiscent of a delectable dessert. Together, these notes form a harmonious blend that is creamy, comforting, and irresistibly sweet. The fragrance envelops you in a cozy and nostalgic ambiance, evoking feelings of comfort and satisfaction",
       category: "Classic Collection",
       length: 9,
@@ -663,7 +723,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[apple,apple2],
       description: "This fragrance starts with the crisp and juicy aroma of red apple and the bright and citrusy notes of orange, creating a refreshing and invigorating opening. The mid notes reveal a delicate and romantic floral bouquet, combining the elegance of rose with the sweet and tangy allure of raspberry. The base notes provide a warm and comforting foundation, with the creamy and sweet essence of vanilla. Together, these notes create a harmonious fragrance that is fruity, floral, and subtly sweet, offering a delightful and enchanting olfactory experience",
       category: "Premium Collection",
       length: 9,
@@ -694,7 +754,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[dolce],
       description: "This fragrance opens with a burst of effervescent Sparkling Aldehydes, complemented by the freshness of Bergamot, Mandarin, Basil, Freesia, and Coriander. The heart of the fragrance blooms with a beautiful bouquet of Carnation, Orange Blossom, Muguet, Jasmine, and Rose, adding a floral and sensual touch. The base notes of Sandalwood, Tonka, Vanilla, and Musk provide a warm and inviting foundation, leaving a trail of sophistication and allure. Together, these notes create a harmonious and captivating fragrance that is both vibrant and elegant, making it a perfect choice for those seeking a timeless and sophisticated scent.",
       category: "Signature Collection",
       length: 9,
@@ -731,7 +791,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[persian],
       description: "This fragrance opens with a zesty and invigorating combination of Meyer Lemon, Persian Lime, and Coriander, creating a vibrant and citrusy introduction. The heart of the scent features Litsea Cubeba and Crushed Greens, adding a fresh and herbaceous quality that is both uplifting and soothing. The base note of Cedarwood provides a warm and grounding foundation, adding depth and sophistication to the fragrance. Together, these notes blend harmoniously to create a refreshing and invigorating scent experience that evokes a sense of vitality and natural serenity.",
       category: "Signature Collection",
       length: 9,
@@ -760,7 +820,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[coolWater,coolWater2,coolWater3],
       description: "This fragrance opens with an invigorating blend of Rosemary, Coriander, Watermint, Fresh Cut Greens, and a touch of Sea Spray Accord, creating a refreshing and herbal introduction. The heart of the scent features Lavender, Geranium, Jasmin, and Neroli, adding a floral and aromatic touch that is both soothing and uplifting. The base notes of Tobacco, Oakmoss, Cedar, Amber, and Musk provide a warm and grounding foundation, adding depth and sophistication to the fragrance. Together, these notes create a captivating and balanced composition that evokes a sense of natural serenity and timeless elegance.",
       category: "Premium Collection",
       length: 9,
@@ -800,7 +860,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[jasmine,jasmine2],
       description: "This fragrance opens with the captivating aroma of Absolute Jasmine and the zestiness of Orange Zest, creating a bright and floral introduction. The mid notes feature the bitterness of Bitter Orange and the sweet warmth of Madagascar Vanilla, adding depth and complexity to the composition. The base notes of Honey and Musk provide a sensual and comforting foundation, leaving a lingering and seductive trail. Together, these notes create a harmonious and alluring fragrance that balances floral, citrus, and gourmand elements, inviting you to indulge in its irresistible charm.",
       category: "Premium Collection",
       length: 9,
@@ -829,7 +889,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[pink,pink2,pink3],
       description: "This fragrance opens with a delightful blend of Pink Sugar, Red Currant, and Pomegranate, creating a sweet and fruity introduction. The mid notes feature the luscious aroma of Peach, the delicate floral essence of Peony and Pink Geranium, and the warm and earthy notes of Ambergris and Tonka Bean. The base notes of Vanilla Bean, Musk, and Amber provide a comforting and sensual foundation, leaving a warm and enticing trail. Together, these notes create a captivating and harmonious fragrance that is both sweet and sophisticated, evoking a sense of joy and allure.",
       category: "Premium Collection",
       length: 9,
@@ -866,7 +926,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[sandalwood,sandalwood2,sandalwood3],
       description: "This fragrance opens with a delicate and floral combination of Honeysuckle and Geranium, creating a sweet and captivating top note. The mid notes reveal the earthy and aromatic tones of Oakmoss, Tonka Bean, and Rosewood, adding depth and richness to the composition. The base notes of Sandalwood, White Amber, Musk, and Vetiver provide a warm and sensual foundation, leaving a lingering and enchanting trail. Together, these notes create a harmonious and sophisticated fragrance that exudes elegance and allure, capturing the essence of natural beauty and sensuality.",
       category: "Premium Collection",
       length: 9,
