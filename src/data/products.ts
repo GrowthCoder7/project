@@ -68,6 +68,8 @@ export const products: Product[] =
       name: "Blueberry Muffin Scented Candle",
       price:199,
       discountedPrice:159,
+      bigPrice:359,
+      bigDiscountedPrice:199,
       tags:getRandomTags(),
       images:[blueberry,blueberry2,blueberry3],
       description: "This fragrance opens with a vibrant burst of citrus and fruity notes, combining the zesty aroma of orange peel, the juicy sweetness of blueberry, and the refreshing tang of lemon zest. The mid notes unfold with a delightful blend of blackberry, spun sugar, and creamy milky undertones, evoking a sense of indulgence and sweetness. The base notes provide a warm and comforting foundation, with the creamy essence of vanilla cream, the luscious sweetness of drizzled caramel, and the woody touch of sandalwood. Together, these notes create a deliciously sweet and comforting fragrance that is both uplifting and cozy",

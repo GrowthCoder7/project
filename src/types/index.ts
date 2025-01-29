@@ -3,6 +3,8 @@ export interface Product {
   name: string;
   price: number;
   discountedPrice?: number; // Made optional since it's not always provided
+  bigPrice?: number;
+  bigDiscountedPrice?: number;
   tags: string[]; // Updated to match the `tags` array in the JSON
   images: string[]; // Keeping this for multiple images
   description?: string; // Made optional, as it might not always be present

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import myImage from '../../assets/images/2.png';
 import Hero2 from '../../assets/images/3.jpg';
+import { Button } from '../ui/Button';
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -68,12 +69,7 @@ export default function Hero() {
           <p className="text-lg md:text-xl text-white/90 mb-12 tracking-wider">
             {slides[currentSlide].subtitle}
           </p>
-          <button
-            onClick={() => navigate('/collections')}
-            className="btn-primary text-sm tracking-widest uppercase"
-          >
-            Explore Collection
-          </button>
+          
         </div>
       </div>
 

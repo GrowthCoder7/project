@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContactSection from './pages/Contact';
 import Navbar from './components/layout/Navbar';
