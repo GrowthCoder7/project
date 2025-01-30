@@ -60,6 +60,17 @@ import persian from "../assets/images/pics/signature/Persian.png"
 import vera from "../assets/images/pics/signature/Vera.png"
 import wine from "../assets/images/pics/signature/Wine.png"
 // import ylang from "../assets/images/pics/signature/Ylang.png"
+import sandalwoodShot from "../assets/images/pics/shot/2.png"
+import pinkPeonyshot from "../assets/images/pics/shot/4.png"
+import coolwatterShot from "../assets/images/pics/shot/6.png"
+import veraWangShot from "../assets/images/pics/shot/19.png"
+import pinkGrapeFruitShot from "../assets/images/pics/shot/15.png"
+import freshCoffeeShot from "../assets/images/pics/shot/14.png"
+import VanillaShot from "../assets/images/pics/shot/13.png"
+import waterLilyShot from "../assets/images/pics/shot/10.png"
+import hawaiinShot from "../assets/images/pics/shot/8.png"
+import coolWaterShot from "../assets/images/pics/shot/6.png"
+
 
 export const products: Product[] = 
 [
@@ -960,7 +971,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[freshCoffeeShot],
       description: "This fragrance opens with a sweet blend of sugarcane and whipped cream in the top notes, creating a delectably creamy start. The heart combines milky notes with the rich aroma of roasted coffee beans. The base notes of vanilla cr\u945de, oak, sandalwood, and a hint of anise offer a warm and comforting depth, resulting in a delightful and cozy aroma.",
       category: "Shot Glass Collection",
       length: 9,
@@ -980,7 +991,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[waterLilyShot],
       description: "This fragrance unfolds with the enchanting notes of absolute jasmine, zesty orange zest, and delicate freesia in the top notes. The heart combines the bitterness of orange, the aquatic freshness of water lily, and the grace of muguet. The base notes of floral musk, blondewoods, and an ozone accord provide a soft and airy finish, resulting in a beautifully balanced and sophisticated scent.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1000,7 +1011,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[veraWangShot],
       description: "This fragrance opens with a vibrant blend of zesty lemon, lime, mandarin, bergamot, and the tropical sweetness of pineapple in the top notes, creating a bright and invigorating introduction. The heart reveals a lush bouquet with lily of the valley, gardenia, jasmin, rose, and iris. The base notes of sandalwood, patchouli, amber, and musk provide a warm and comforting depth, resulting in a harmonious and timeless scent.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1020,7 +1031,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[sandalwoodShot],
       description: "This fragrance opens with the sweet allure of honeysuckle and the freshness of geranium in the top notes. The heart combines the earthiness of oakmoss, the warmth of tonka bean, and the richness of rosewood. The base notes of sandalwood, white amber, musk, and vetiver create a grounding and sophisticated aroma, resulting in a beautifully balanced and complex scent.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1040,7 +1051,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[VanillaShot],
       description: "This fragrance commences with the crispness of Fuji apple and the warmth of anise in the top notes. The heart combines the floral sweetness of heliotrope with the creamy allure of coconut. The base notes of caramelized sugar and buttery vanilla create a luscious and comforting aroma, offering a delightful and cozy scent experience.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1060,7 +1071,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[pinkGrapeFruitShot],
       description: "This fragrance opens with a vibrant burst of bergamot, grapefruit, lemon rind, and citron in the top notes, creating a zesty and refreshing introduction. The heart combines pink grapefruit, iris, and light ozonic notes, imparting a fresh and airy quality. The base notes of sugar cane, vanilla, and cypress add a subtle sweetness and woody depth, rounding out this invigorating scent.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1080,7 +1091,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[hawaiinShot],
       description: "This fragrance opens with a tropical burst of lime, mandarin, mango, and apple, accented by fei banana leaves for a fruity and exotic introduction. The heart combines the floral elegance of jasmine and cyclamen with a touch of shore juniper. The base notes of driftwood and hula girl orchid create a beachy and captivating aroma, evoking a sense of coastal paradise.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1100,7 +1111,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[coolwatterShot,coolWaterShot],
       description: "This fragrance starts with an invigorating blend of rosemary, coriander, watermint, fresh-cut greens, and a hint of sea spray accord in the top notes, offering a refreshing and outdoorsy beginning. The heart combines floral notes of lavender, geranium, jasmine, and neroli. The base notes of tobacco, oakmoss, cedar, amber, and musk create a warm and masculine depth, resulting in a well-balanced and captivating scent.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1120,7 +1131,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[pinkPeonyshot],
       description: "This fragrance opens with a burst of sweet pink sugar, tangy red currant, and luscious pomegranate in the top notes, creating a vibrant and fruity introduction. The heart combines the richness of peach, the floral elegance of peony, and the depth of ambergris, tonka bean, and pink geranium. The base notes of vanilla bean, musk, and amber provide a warm and sensuous finish, resulting in a complex and alluring scent.",
       category: "Shot Glass Collection",
       length: 9,
@@ -1140,7 +1151,7 @@ export const products: Product[] =
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
-      images:[],
+      images:[jasmine],
       description: "This fragrance begins with the captivating allure of absolute jasmine and the zesty brightness of orange zest in the top notes. The heart combines the bitterness of orange with the warmth of Madagascar vanilla. The base notes of honey and musk add a sweet and sensuous depth, resulting in a beautifully balanced and enticing scent.",
       category: "Shot Glass Collection",
       length: 9,

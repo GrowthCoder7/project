@@ -455,7 +455,7 @@ export default function ProductDetails() {
         className="absolute inset-0 z-0"
       />
       <div className="relative max-w-4xl mx-auto py-8 px-4 md:px-6 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start space-y-6 md:space-y-0">
+        <div className="grid grid-cols-1  md:grid-cols-2 mt-16 -mb-20 gap-8 items-start space-y-6 md:space-y-0">
           {/* Product Image */}
           <div className="relative">
             <img
@@ -466,13 +466,13 @@ export default function ProductDetails() {
             {/* Image Navigation */}
             <button
               onClick={handlePrevImage}
-              className="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full"
+              className="absolute top-1/2 left-0 -translate-y-1/2 bg-slate-400 text-white p-2 rounded-full"
             >
               {"<"}
             </button>
             <button
               onClick={handleNextImage}
-              className="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full"
+              className="absolute top-1/2 right-0 -translate-y-1/2 bg-slate-400 text-white p-2 rounded-full"
             >
               {">"}
             </button>
@@ -509,24 +509,24 @@ export default function ProductDetails() {
             </div>
 
             {/* Price */}
-            <div className="mt-4">
-              <span className="text-2xl font-semibold text-amber-700">
+            <div className="mt-4 gap-x-3">
+              {selectedSize === product.sizes[1]
+                ? product.bigDiscountedPrice && (
+                    <span className="text-2xl font-semibold text-amber-700">
+                      ₹{product.bigDiscountedPrice}
+                    </span>
+                  )
+                : product.discountedPrice && (
+                    <span className="text-2xl font-semibold text-amber-700">
+                      ₹{product.discountedPrice}
+                    </span>
+                  )}
+                  <span className="ml-2 text-sm font-semibold text-gray-400 line-through">
                 ₹
                 {selectedSize === product.sizes[1]
                   ? product.bigPrice
                   : product.price}
               </span>
-              {selectedSize === product.sizes[1]
-                ? product.bigDiscountedPrice && (
-                    <span className="ml-2 text-sm text-gray-400 line-through">
-                      ₹{product.bigDiscountedPrice}
-                    </span>
-                  )
-                : product.discountedPrice && (
-                    <span className="ml-2 text-sm text-gray-400 line-through">
-                      ₹{product.discountedPrice}
-                    </span>
-                  )}
             </div>
 
             {/* Add to Cart and Wishlist Buttons */}
