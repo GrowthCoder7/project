@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
+import Valentine from "../../assets/images/Valentine.png";
 
 const DiscountSection = () => {
   // Set target date to 18 days from now
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 17);
+  const targetDate = new Date(2025,1,14);
 
   return (
     <section className="min-h-screen flex items-center justify-center p-4 md:p-8">
@@ -14,7 +14,7 @@ const DiscountSection = () => {
           <div className="relative h-[400px] md:h-full overflow-hidden">
             <div className="absolute inset-0 bg-black">
               <img
-                src="/lovable-uploads/ca90a503-f31f-4fce-95ae-acc0060a99ee.png"
+                src={Valentine}
                 alt="Valentine's special candle"
                 className="w-full h-full object-cover opacity-90 animate-fade-in"
               />
