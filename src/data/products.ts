@@ -9,7 +9,7 @@ import apple2 from "../assets/images/pics/premium/apple orange raspberry 250.png
 import blueberry from "../assets/images/pics/premium/Blueberry muffin 1.1.jpg"
 import blueberry2 from "../assets/images/pics/premium/Blueberry muffin 200.1 .jpg"
 import blueberry3 from "../assets/images/pics/premium/Blueberry muffin combo.jpg"
-import cleanLinen from "../assets/images/pics/premium/Clean linen 1.1.jpg"
+import cleanLinen from "../assets/images/pics/premium/Clean Linen 1.1.jpg"
 import cleanLinen2 from "../assets/images/pics/premium/Clean Linen 200.1 .jpg"
 import creameCaramel from "../assets/images/pics/premium/Crème caramel 1.1.jpg"
 import creameCaramel2 from "../assets/images/pics/premium/Crème caramel 200.1 .jpg"
