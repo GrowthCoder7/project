@@ -15,7 +15,7 @@ import AdminProducts from './pages/admin/Products';
 import Login from './pages/Login';
 import { ShopProvider } from './Context/ShopContext';
 import ProductPage from './pages/ProductPage';
-import Terms from './pages/terms';
+import Terms from './pages/Terms';
 import Shipping from './pages/Shipping';
 import Refund from './pages/Refund';
 import Privacy from './pages/Privacy';

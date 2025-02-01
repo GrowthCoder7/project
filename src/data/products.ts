@@ -1013,7 +1013,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1033,7 +1033,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1053,7 +1053,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1073,7 +1073,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1093,7 +1093,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1113,7 +1113,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1133,7 +1133,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1153,7 +1153,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1173,7 +1173,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
@@ -1193,7 +1193,7 @@ export const products: Product[] =
       length: 9,
           width: 9,
       height: 13,
-      sizes: [],
+      sizes: ["60 mL"],
       burnTime: "20 hours",
       fragranceNotes: {
           topNotes: [],
