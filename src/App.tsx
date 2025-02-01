@@ -15,6 +15,10 @@ import AdminProducts from './pages/admin/Products';
 import Login from './pages/Login';
 import { ShopProvider } from './Context/ShopContext';
 import ProductPage from './pages/ProductPage';
+import Terms from './pages/terms';
+import Shipping from './pages/Shipping';
+import Refund from './pages/Refund';
+import Privacy from './pages/Privacy';
 
 export default function App() {
   return (
@@ -33,6 +37,10 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path='/contact' element={<ContactSection/>}></Route>
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/shipping" element={<Shipping />} />
+          <Route path="/refund" element={<Refund />} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
