@@ -240,7 +240,7 @@ export const products: Product[] =
               " Roasted Coffee Bean"
           ],
           baseNotes: [
-              "Vanilla Cr\u945de",
+              "Vanilla Crème",
               " Oak",
               " Sandalwood",
               " Anise"
@@ -702,7 +702,7 @@ export const products: Product[] =
   },
   {
       id: 19,
-      name: "Creme Caramel Scented Candle",
+      name: "Crème Caramel Scented Candle",
       price:199,
       discountedPrice:159,
       tags:getRandomTags(),
