@@ -1,3 +1,4 @@
+// src/components/admin/Products.tsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
@@ -13,28 +14,35 @@ export default function Products() {
 
   useEffect(() => {
     if (!user || user.role !== 'admin') {
-      navigate('/');
+      navigate('/login');
       return;
     }
     fetchProducts();
   }, [user, navigate]);
 
   const fetchProducts = async () => {
-    const { data } = await api.get('/products');
-    setProducts(data);
+    try {
+      const { data } = await api.get('/products');
+      setProducts(data);
+    } catch (error) {
+      console.error("Failed to fetch products", error);
+    }
   };
 
   const handleAddProduct = async (product: Partial<Product>) => {
-    await api.post('/products', product);
-    setIsAddingProduct(false);
-    fetchProducts();
+    try {
+      await api.post('/products', product);
+      setIsAddingProduct(false);
+      fetchProducts();
+    } catch (error) {
+      console.error("Failed to add product", error);
+    }
   };
 
   return (
     <div className="min-h-screen pt-20 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-3xl font-serif mb-8">Manage Products</h1>
-        
         {isAddingProduct ? (
           <ProductForm onSubmit={handleAddProduct} />
         ) : (
@@ -45,8 +53,7 @@ export default function Products() {
             Add New Product
           </button>
         )}
-        
-        {/* Product list */}
+        {/* You can also list the products here, if needed */}
       </div>
     </div>
   );

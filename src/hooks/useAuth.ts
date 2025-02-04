@@ -1,11 +1,10 @@
-import { create } from 'zustand';
-import { login as loginApi, logout as logoutApi, getCurrentUser } from '../services/auth';
-import { User } from '../types/user';
+import { create } from "zustand";
+import api from "../services/api";
 
 interface AuthState {
-  user: User | null;
+  user: { email: string; role: string } | null;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<User>;
+  login: (email: string, password: string) => Promise<void>;
   logout: () => void;
   checkAuth: () => Promise<void>;
 }
@@ -16,13 +15,15 @@ export const useAuth = create<AuthState>((set) => ({
 
   checkAuth: async () => {
     try {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem("token");
       if (token) {
-        const userData = await getCurrentUser();
-        set({ user: userData });
+        const { data } = await api.get("/auth/me", {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        set({ user: data });
       }
     } catch (error) {
-      console.error('Auth check failed:', error);
+      console.error("Auth check failed:", error);
     } finally {
       set({ isLoading: false });
     }
@@ -30,17 +31,17 @@ export const useAuth = create<AuthState>((set) => ({
 
   login: async (email: string, password: string) => {
     try {
-      const { user: userData } = await loginApi(email, password);
-      set({ user: userData });
-      return userData;
+      const { data } = await api.post("/auth/login", { email, password });
+      localStorage.setItem("token", data.token);
+      set({ user: data.user });
     } catch (error) {
-      console.error('Login failed:', error);
+      console.error("Login failed:", error);
       throw error;
     }
   },
 
   logout: () => {
-    logoutApi();
+    localStorage.removeItem("token");
     set({ user: null });
-  }
+  },
 }));

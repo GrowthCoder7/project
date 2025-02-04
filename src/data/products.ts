@@ -224,7 +224,7 @@ export const products: Product[] =
       bigDiscountedPrice:1599,
       tags:getRandomTags(),
       images:[freshCofee,freshCofee2],
-      description: "This fragrance begins with a sweet and indulgent combination of sugarcane and whipped cream, evoking a sense of sugary delight. As the fragrance develops, milky notes and roasted coffee bean emerge, creating a comforting and cozy aroma reminiscent of a delicious coffeehouse treat. The base notes of vanilla cr\u945de, oak, sandalwood, and anise add depth and warmth, leaving a lingering and inviting trail. Together, these notes create a rich and creamy scent that is both comforting and enticing, enveloping you in a sweet and aromatic embrace",
+      description: "This fragrance begins with a sweet and indulgent combination of sugarcane and whipped cream, evoking a sense of sugary delight. As the fragrance develops, milky notes and roasted coffee bean emerge, creating a comforting and cozy aroma reminiscent of a delicious coffeehouse treat. The base notes of vanilla crème, oak, sandalwood, and anise add depth and warmth, leaving a lingering and inviting trail. Together, these notes create a rich and creamy scent that is both comforting and enticing, enveloping you in a sweet and aromatic embrace",
       category: "Premium Collection",
       length: 9,
           width: 9,

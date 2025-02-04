@@ -1,3 +1,4 @@
+// src/components/admin/ProductForm.tsx
 import React, { useState } from 'react';
 import { Product } from '../../types';
 import Button from '../ui/Button';
@@ -11,13 +12,19 @@ export default function ProductForm({ product, onSubmit }: ProductFormProps) {
   const [formData, setFormData] = useState({
     name: product?.name || '',
     price: product?.price || 0,
+    discountedPrice: product?.discountedPrice || 0,
+    bigPrice: product?.bigPrice || 0,
+    bigDiscountedPrice: product?.bigDiscountedPrice || 0,
+    tags: product?.tags || [],
+    images: product?.images || [''],
     description: product?.description || '',
     category: product?.category || '',
-    images: product?.images || [''],
-    scent: product?.scent || [''],
+    length: product?.length || 0,
+    width: product?.width || 0,
+    height: product?.height || 0,
+    sizes: product?.sizes || [],
     burnTime: product?.burnTime || '',
-    tags: product?.tags || [''],
-    discount: product?.discount || 0,
+    fragranceNotes: product?.fragranceNotes || { topNotes: [], midNotes: [], baseNotes: [] },
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,9 +44,7 @@ export default function ProductForm({ product, onSubmit }: ProductFormProps) {
           required
         />
       </div>
-      
-      {/* Add other form fields */}
-      
+      {/* Additional form fields should follow the same pattern */}
       <Button type="submit" variant="primary">
         {product ? 'Update Product' : 'Add Product'}
       </Button>
