@@ -67,7 +67,8 @@
 // }
 
 import React from 'react';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Twitter ,} from 'lucide-react';
+import { FaWhatsapp, FaPinterest } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import NewsletterForm from '../newsletter/NewsletterForm';
 
@@ -126,7 +127,10 @@ export default function Footer() {
               <Instagram className="w-5 h-5" />
             </a>
             <a href="#" className="text-brown-50/80 hover:text-brown-50">
-              <Twitter className="w-5 h-5" />
+              <FaWhatsapp className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-brown-50/80 hover:text-brown-50">
+              <FaPinterest className="w-5 h-5" />
             </a>
           </div>
         </div>

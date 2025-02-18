@@ -57,7 +57,7 @@ export default function ProductDetails() {
   return (
     <>
       <div className="relative max-w-6xl mx-auto py-12 px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 mt-6 md:grid-cols-2 gap-12 items-start">
           {/* 🖼️ Product Image with Thumbnails Below */}
           <div>
             <div className="relative">
@@ -109,16 +109,6 @@ export default function ProductDetails() {
               </div>
             </div>
 
-            {/* 🏷️ Price */}
-            <div className="mt-4">
-              <span className="text-3xl font-semibold text-amber-700">
-                ₹{selectedSize === product.sizes[1] ? product.bigDiscountedPrice : product.discountedPrice}
-              </span>
-              <span className="ml-2 text-lg text-gray-400 line-through">
-                ₹{selectedSize === product.sizes[1] ? product.bigPrice : product.price}
-              </span>
-            </div>
-
             {/* 📜 Description Toggle */}
             <div className="mt-6">
               <button onClick={toggleDescription} className="flex justify-between w-full text-lg font-semibold text-gray-800 border-b pb-2">
@@ -143,6 +133,16 @@ export default function ProductDetails() {
                   <p><strong>Base Notes:</strong> {product.fragranceNotes?.baseNotes?.join(", ") || "N.A."}</p>
                 </div>
               )}
+            </div>
+
+            {/* 🏷️ Price */}
+            <div className="mt-4">
+              <span className="text-3xl font-semibold text-amber-700">
+                ₹{selectedSize === product.sizes[1] ? product.bigDiscountedPrice : product.discountedPrice}
+              </span>
+              <span className="ml-2 text-lg text-gray-400 line-through">
+                ₹{selectedSize === product.sizes[1] ? product.bigPrice : product.price}
+              </span>
             </div>
 
             {/* 🛒 Buttons */}

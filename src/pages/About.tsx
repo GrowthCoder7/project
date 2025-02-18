@@ -32,7 +32,7 @@ const About = () => {
 
       <Section title="Our Story">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="prose prose-lg">
+          <div className="prose prose-lg text-base">
             <ul className="text-brown-dark space-y-4 list-disc pl-4">
               <li>
               There is a wonderful story behind the birth of Candlings by DiShane. It’s great to see how your thought of sending a meaningful gift to your partner in a long-distance relationship led to the creation of a company that focuses on emotions, brightness, and luxury.
@@ -63,8 +63,8 @@ const About = () => {
       </Section>
 
       <Section title="Our Vision" dark className="text-[#d4b4a4]">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[400px] order-2 md:order-1">
+        <div className="grid md:grid-cols-2 gap-12 items-center text-base">
+          <div className="relative h-[400px] order-2 md:order-1 ">
             <img
               src={about2}
               alt="Our Vision"
@@ -92,7 +92,7 @@ const About = () => {
 
       <Section title="Our Mission">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="prose prose-lg">
+          <div className="prose prose-lg text-base">
             <ul className="text-brown-dark space-y-4 list-disc pl-4">
               <li>
               Our mission and goals align with empowering women’s entrepreneurship, supporting the Prime Minister of India’s vision of Aatma Nirbhar Bharat (Self-reliant India), and contributing to a sustainable environment.
