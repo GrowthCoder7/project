@@ -4,7 +4,7 @@ import { products } from "../data/products";
 import { useCartStore } from "../store/useCartStore";
 import { useWishlistStore } from "../store/useWishlistStore";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import Particles from "react-tsparticles"; // Import your existing Footer component
+import Footer from "../components/layout/Footer";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -14,8 +14,8 @@ export default function ProductDetails() {
 
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
   const [isAdditionalInfoOpen, setIsAdditionalInfoOpen] = useState(false);
-  const [selectedSize, setSelectedSize] = useState(product?.sizes[0]); // Default to the first size
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [selectedSize, setSelectedSize] = useState(product?.sizes[0]); // Default to first size
+  const [currentImage, setCurrentImage] = useState(product?.images[0]); // First image by default
 
   if (!product) {
     return (
@@ -25,28 +25,11 @@ export default function ProductDetails() {
     );
   }
 
-  const toggleDescription = () => {
-    setIsDescriptionOpen(!isDescriptionOpen);
-  };
-  const toggleInfo = () => {
-    setIsAdditionalInfoOpen(!isAdditionalInfoOpen);
-  };
-
-  const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? product.images.length - 1 : prevIndex - 1
-    );
-  };
+  const toggleDescription = () => setIsDescriptionOpen(!isDescriptionOpen);
+  const toggleInfo = () => setIsAdditionalInfoOpen(!isAdditionalInfoOpen);
 
   const handleAddToCart = () => {
-    const isBigSize =
-      product.sizes[1] && selectedSize === product.sizes[1];
+    const isBigSize = product.sizes[1] && selectedSize === product.sizes[1];
 
     addToCart({
       ...product,
@@ -59,8 +42,7 @@ export default function ProductDetails() {
   };
 
   const handleAddToWishlist = () => {
-    const isBigSize =
-      product.sizes[1] && selectedSize === product.sizes[1];
+    const isBigSize = product.sizes[1] && selectedSize === product.sizes[1];
 
     addToWishlist({
       ...product,
@@ -73,70 +55,52 @@ export default function ProductDetails() {
   };
 
   return (
-  <>
-  <div className="relative">
-      {/* Interactive Background */}
-      <Particles
-        options={{
-          background: {
-            color: { value: "#ffffff" },
-          },
-          particles: {
-            number: { value: 50 },
-            size: { value: 3 },
-            move: { enable: true, speed: 1 },
-            opacity: { value: 0.5 },
-            links: { enable: true, color: "#d4a373" },
-          },
-        }}
-        className="absolute inset-0 z-0"
-      />
-      <div className="relative max-w-4xl mx-auto py-8 px-4 md:px-6 z-10">
-        <div className="grid grid-cols-1  md:grid-cols-2 mt-16 -mb-20 gap-8 items-start space-y-6 md:space-y-0">
-          {/* Product Image */}
-          <div className="relative">
-            <img
-              src={product.images[currentImageIndex]}
-              alt={product.name}
-              className="w-full rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
-            />
-            {/* Image Navigation */}
-            <button
-              onClick={handlePrevImage}
-              className="absolute top-1/2 left-0 -translate-y-1/2 bg-slate-400 text-white p-2 rounded-full"
-            >
-              {"<"}
-            </button>
-            <button
-              onClick={handleNextImage}
-              className="absolute top-1/2 right-0 -translate-y-1/2 bg-slate-400 text-white p-2 rounded-full"
-            >
-              {">"}
-            </button>
+    <>
+      <div className="relative max-w-6xl mx-auto py-12 px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* 🖼️ Product Image with Thumbnails Below */}
+          <div>
+            <div className="relative">
+              <img
+                src={currentImage}
+                alt={product.name}
+                className="w-full h-[450px] object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+
+            {/* 🔄 Image Selection */}
+            <div className="flex gap-2 mt-4 justify-center">
+              {product.images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Thumbnail ${index}`}
+                  className={`w-16 h-16 object-cover rounded-md cursor-pointer transition-all duration-300 ${
+                    currentImage === img ? "border-2 border-amber-700" : "opacity-60"
+                  }`}
+                  onClick={() => setCurrentImage(img)}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* Product Details */}
+          {/* 📜 Product Details */}
           <div>
-            <h1 className="text-2xl font-semibold text-gray-800 tracking-tight">
-              {product.name}
-            </h1>
-            <p className="text-sm text-gray-500 mt-2">
-              Category: {product.category}
-            </p>
-            {/* Sizes */}
+            <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
+            <p className="text-sm text-gray-600 mt-2">Category: {product.category}</p>
+
+            {/* 🔢 Sizes Selection */}
             <div className="mt-4">
-              <span className="text-lg font-semibold text-gray-600">
-                Available Sizes:
-              </span>
+              <span className="text-lg font-semibold text-gray-800">Available Sizes:</span>
               <div className="flex gap-2 mt-2">
                 {product.sizes.map((size) => (
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
-                    className={`px-3 py-1 rounded-md text-sm ${
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
                       selectedSize === size
                         ? "bg-amber-700 text-white"
-                        : "bg-gray-200 text-gray-700"
+                        : "bg-gray-200 text-gray-800"
                     }`}
                   >
                     {size}
@@ -145,90 +109,56 @@ export default function ProductDetails() {
               </div>
             </div>
 
-            {/* Price */}
-            <div className="mt-4 gap-x-3">
-              {selectedSize === product.sizes[1]
-                ? product.bigDiscountedPrice && (
-                    <span className="text-2xl font-semibold text-amber-700">
-                      ₹{product.bigDiscountedPrice}
-                    </span>
-                  )
-                : product.discountedPrice && (
-                    <span className="text-2xl font-semibold text-amber-700">
-                      ₹{product.discountedPrice}
-                    </span>
-                  )}
-                  <span className="ml-2 text-sm font-semibold text-gray-400 line-through">
-                ₹
-                {selectedSize === product.sizes[1]
-                  ? product.bigPrice
-                  : product.price}
+            {/* 🏷️ Price */}
+            <div className="mt-4">
+              <span className="text-3xl font-semibold text-amber-700">
+                ₹{selectedSize === product.sizes[1] ? product.bigDiscountedPrice : product.discountedPrice}
+              </span>
+              <span className="ml-2 text-lg text-gray-400 line-through">
+                ₹{selectedSize === product.sizes[1] ? product.bigPrice : product.price}
               </span>
             </div>
 
-            {/* Add to Cart and Wishlist Buttons */}
-            <div className="flex flex-wrap gap-4 mt-6">
-              <button
-                onClick={handleAddToCart}
-                className="px-5 py-2 bg-amber-700 text-white font-medium rounded-lg shadow hover:bg-amber-800 transition-all w-full md:w-auto"
-              >
-                Add to Cart
+            {/* 📜 Description Toggle */}
+            <div className="mt-6">
+              <button onClick={toggleDescription} className="flex justify-between w-full text-lg font-semibold text-gray-800 border-b pb-2">
+                Description
+                {isDescriptionOpen ? <ChevronUp /> : <ChevronDown />}
               </button>
-              <button
-                onClick={handleAddToWishlist}
-                className="px-5 py-2 border border-amber-700 text-amber-700 font-medium rounded-lg shadow hover:bg-amber-700 hover:text-white transition-all w-full md:w-auto"
-              >
-                Add to Wishlist
-              </button>
+              {isDescriptionOpen && <p className="mt-4 text-gray-600">{product.description}</p>}
             </div>
 
-            {/* Description with Toggle */}
+            {/* ℹ️ Additional Information Toggle */}
             <div className="mt-6">
-              <button
-                className="flex items-center justify-between w-full text-lg font-medium text-gray-800 border-b border-gray-200 pb-3"
-                onClick={toggleDescription}
-              >
-                <span>Description</span>
-                {isDescriptionOpen ? (
-                  <ChevronUp className="w-5 h-5 text-gray-600" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-600" />
-                )}
-              </button>
-              {isDescriptionOpen && (
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  {product.description}
-                </p>
-              )}
-            </div>
-
-            {/* Additional Information */}
-            <div className="mt-6">
-              <button
-                className="flex items-center justify-between w-full text-lg font-medium text-gray-800 border-b border-gray-200 pb-3"
-                onClick={toggleInfo}
-              >
-                <span>Additional Information</span>
-                {isAdditionalInfoOpen ? (
-                  <ChevronUp className="w-5 h-5 text-gray-600" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-600" />
-                )}
+              <button onClick={toggleInfo} className="flex justify-between w-full text-lg font-semibold text-gray-800 border-b pb-2">
+                Additional Information
+                {isAdditionalInfoOpen ? <ChevronUp /> : <ChevronDown />}
               </button>
               {isAdditionalInfoOpen && (
-                <div className="mt-4 text-gray-600 leading-relaxed">
-                  <p><span className="font-semibold">Dimensions: </span><span>{`${product.length}x${product.width}x${product.height} cm`}</span></p>
-                  <p><span className="font-semibold">Burn Time: </span><span>{product.burnTime}</span></p>
-                  <p><span className="font-semibold">Top Notes: </span><span>{product.fragranceNotes.topNotes.length > 0 ?product.fragranceNotes.topNotes.join(", "):"N.A."}</span></p>
-                  <p><span className="font-semibold">Mid Notes: </span><span>{product.fragranceNotes?.midNotes.length > 0 ?product.fragranceNotes?.midNotes.join(", "):"N.A."}</span></p>
-                  <p><span className="font-semibold">Base Notes: </span><span>{product.fragranceNotes?.baseNotes.length > 0 ?product.fragranceNotes?.baseNotes.join(", "):"N.A."}</span> </p>
+                <div className="mt-4 text-gray-600">
+                  <p><strong>Dimensions:</strong> {`${product.length}x${product.width}x${product.height} cm`}</p>
+                  <p><strong>Burn Time:</strong> {product.burnTime}</p>
+                  <p><strong>Top Notes:</strong> {product.fragranceNotes?.topNotes?.join(", ") || "N.A."}</p>
+                  <p><strong>Mid Notes:</strong> {product.fragranceNotes?.midNotes?.join(", ") || "N.A."}</p>
+                  <p><strong>Base Notes:</strong> {product.fragranceNotes?.baseNotes?.join(", ") || "N.A."}</p>
                 </div>
               )}
+            </div>
+
+            {/* 🛒 Buttons */}
+            <div className="flex gap-4 mt-6">
+              <button onClick={handleAddToCart} className="px-6 py-3 bg-amber-700 text-white rounded-lg shadow-md hover:bg-amber-800 transition-all">
+                Add to Cart
+              </button>
+              <button onClick={handleAddToWishlist} className="px-6 py-3 border border-amber-700 text-amber-700 rounded-lg hover:bg-amber-700 hover:text-white transition-all">
+                Add to Wishlist
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </>
+
+      {/* 📢 Footer with Social Links */}
+    </>
   );
 }
