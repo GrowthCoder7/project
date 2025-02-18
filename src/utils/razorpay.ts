@@ -2,6 +2,26 @@ import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 
 export const initializeRazorpayPayment = async (amount: number, orderDetails: any, navigate: any) => {
+  // Ensure Razorpay is loaded
+  const loadRazorpayScript = () =>
+    new Promise((resolve) => {
+      if ((window as any).Razorpay) {
+        resolve(true);
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
+
+  const isLoaded = await loadRazorpayScript();
+  if (!isLoaded) {
+    toast.error("Failed to load Razorpay. Please check your internet connection.");
+    return;
+  }
+
   const options = {
     key: "rzp_live_ZFznZ1XO6WRsA8",
     amount: amount * 100, // Convert to paisa
@@ -11,11 +31,7 @@ export const initializeRazorpayPayment = async (amount: number, orderDetails: an
     image: "/og-image.png",
     handler: async function (response: any) {
       toast.success("Payment successful!");
-
-      // Send email confirmation first
       await sendOrderEmail(orderDetails, response.razorpay_payment_id);
-
-      // Navigate to Order Success after payment confirmation
       navigate("/order-success");
     },
     prefill: {
