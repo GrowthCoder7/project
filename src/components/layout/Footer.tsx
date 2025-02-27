@@ -126,10 +126,10 @@ export default function Footer() {
             <a href="https://www.instagram.com/candlingsbydishane/" className="text-brown-50/80 hover:text-brown-50">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="text-brown-50/80 hover:text-brown-50">
+            <a href="https://wa.me/message/RUUJK4FNVNT2A1" className="text-brown-50/80 hover:text-brown-50">
               <FaWhatsapp className="w-5 h-5" />
             </a>
-            <a href="#" className="text-brown-50/80 hover:text-brown-50">
+            <a href="https://pin.it/5RAPS7c30" className="text-brown-50/80 hover:text-brown-50">
               <FaPinterest className="w-5 h-5" />
             </a>
           </div>
