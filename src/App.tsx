@@ -19,6 +19,8 @@ import Terms from './pages/Terms';
 import Shipping from './pages/Shipping';
 import Refund from './pages/Refund';
 import Privacy from './pages/Privacy';
+import BulkOrder from './pages/BulkOrder';
+import OrderSuccess from './pages/OrderSuccess';
 
 export default function App() {
   return (
@@ -41,6 +43,8 @@ export default function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/refund" element={<Refund />} />
+          <Route path="/bulk-order" element={<BulkOrder/>} />
+          <Route path="/order-success" element={<OrderSuccess/>} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminRoute><AdminDashboard /></AdminRoute>} />

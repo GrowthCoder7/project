@@ -1,10 +1,11 @@
 import { Heart, Star, Lightbulb, Shield, Target } from "lucide-react";
 import Section from "../components/Section";
 import ValueCard from "../components/ValueCard";
-import hero from "../assets/images/4.png";
-import about1 from "../assets/images/About1.png"
-import about2 from "../assets/images/About2.png"
-import about3 from "../assets/images/About3.png"
+// import hero from "../assets/images/4.png";
+import hero from "../assets/images/pics/new_pics/Signature top.png"
+import about1 from "../assets/images/pics/new_pics/Premium Combo.png"
+import about2 from "../assets/images/pics/new_pics/Signature Combo.png"
+import about3 from "../assets/images/pics/new_pics/Premium Pack.png"
 
 const About = () => {
   return (
@@ -20,7 +21,7 @@ const About = () => {
           <div className="absolute inset-0 gradient-overlay" />
         </div>
         <div className="relative h-full flex flex-col items-baseline justify-center text-white text-center ">
-          <h1 className="text-5xl text-[#d4b4a4] font-bold md:text-[93px] font-serif mb-6 animate-float">
+          <h1 className="text-5xl text-amber-800 font-bold md:text-[93px] font-serif mb-6 animate-float">
             <p className="font-[1000] relative mt-32">Candlings</p>
             <p className="ml-24 pl-2 mt-5">by DiShane</p>
           </h1>

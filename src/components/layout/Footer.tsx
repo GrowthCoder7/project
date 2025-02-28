@@ -91,7 +91,7 @@ export default function Footer() {
               <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Collections</Link></li>
               <li><Link to="/about" className="text-brown-50/80 hover:text-brown-50">About us</Link></li>
               <li><Link to="/contact" className="text-brown-50/80 hover:text-brown-50">Contact</Link></li>
-              <li><Link to="/collections" className="text-brown-50/80 hover:text-brown-50">Bulk Order Enquiry</Link></li>
+              <li><Link to="/bulk-order" className="text-brown-50/80 hover:text-brown-50">Bulk Order Enquiry</Link></li>
             </ul>
           </div>
           
